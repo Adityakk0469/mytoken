@@ -34,24 +34,39 @@ This Solidity contract implements a basic ERC20-like token with mint and burn fu
 * Compile the contract.
 * Deploy the contract.
 ```
-code blocks for commands
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+contract MyToken {
+
+    // public variables here
+    string public tokenname="Aditya Token";
+    string public tokenabbrv="ADT";
+    uint public totalsupply = 0;
+
+    // mapping variable here
+    mapping(address => uint) public balances;
+
+    // mint function
+    function mint(address _address , uint _value)public{
+        totalsupply += _value;
+        balances[_address] += _value;
+    }
+
+    // burn function
+    function burn(address _address , uint _value)public{
+        if(balances[_address]>= _value){
+            totalsupply -= _value;
+            balances[_address] -= _value;
+        }
+    }
+
+}
 ```
 
-## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
 
 ## Authors
 
-Contributors names and contact info
+Aditya Kumar 
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
-
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
