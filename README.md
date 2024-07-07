@@ -1,22 +1,38 @@
-# Project Title
+# My Token
 
-Simple overview of use/purpose.
+This Solidity contract implements a basic ERC20-like token with mint and burn functionalities.
 
-## Description
+## Contract Overview
 
-An in-depth paragraph about your project and overview of use.
+### The MyToken contract includes:
 
+* Public variables for the token name, abbreviation, and total supply.
+* A mapping to track the balances of different addresses.
+* Functions to mint and burn tokens.
+
+## Public Variables
+
+* string public tokenname: The name of the token. Initialized to "Aditya Token".
+* string public tokenabbrv: The abbreviation of the token. Initialized to "ADT".
+* uint public totalsupply: The total supply of the tokens. Initialized to 0.
+
+## Mapping
+
+* mapping(address => uint) public balances: A mapping that stores the balance of each address.
+
+  
 ## Getting Started
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+* To run test the program just copy the content of mytoken.sol
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+* Open Remix IDE. https://remix.ethereum.org/
+* Create a new file and paste the contract code.
+* Compile the contract.
+* Deploy the contract.
 ```
 code blocks for commands
 ```
